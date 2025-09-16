@@ -1,0 +1,105 @@
+// Download JDK which involves JRE which involves JVM
+
+JDK => JRE => JVM
+
+JVM Includes class loader which is like a librarian which check for class
+it does the linking, preparartion, resolution (convert symbolic reference) ==>> intialization
+
+---------------------------------------------------------------
+Class loader => is used to load java classes.
+
+//Components of class loader
+
+1- BootStrap Class Loader => Provide Core Java Classes 
+#earlier rt.jar was used for connectivity of database and gui which we need to import before java 8 version.   
+
+2- Platform Class Loader => Loads platform specific loader like java.sql and java.GUI.
+
+3- Application Class Loader => It loads user define class.
+
+----------------------------------------------------------------
+
+Memory Area (Run area, Data area)
+
+0- Method Area/ also known as meta area , meta space => stores information about classes
+1- Heap Area => Keep All The Object the identifiers are referencing to in memory.
+2- Stack Area => Keep All The Identifier 
+3- PC Register => Keep Track of parent process 
+4- Native method area => Stores states of native method which are writeen in language like C or C++.
+
+----------------------------------------------------------------
+
+
+Execution Engine=> 
+Includes>>
+
+1- Interpreter - a little bit slower
+2- JIT -  Just In Time Compiler for fast execution of program by saving previously executed bytecode.
+3 - JNI - Java Native Interpreter
+
+----------------------------------------------------------------
+
+
+//Object reference=>>
+
+An Object reference is a variable that holds the memory address of an object in the heap area, allowing you to access and manipulate that object indirectly.
+
+
+
+The main purpose of constructor is to initialise the object.
+every java class has an instructor.
+a constructor is automatically called at the point of object creation.
+a constructor never contain any return type including void
+if no constructor is written in a class, java adds a default constructor
+
+we can write a private constructor but according to the rules we cannot access private constructor outside of the class
+
+
+//Interface => Interface Contain Only Abstract Methods
+we use keyword => implements to achieve Interface
+
+Interface Method are by default public + Abstract
+
+Interface variables are by default public + static + Abstract
+
+Interface method must be overwritten inside the implementing class
+
+//Static and Non Static Method=>>
+
+=>>Static Method
+A Static method in java is a method belongs to the class rather than a object created using that class;
+=>it can be called directly using the class name without creating an object
+it can only access static data members and static method directly
+
+=>>Non Static Method
+A Non static method is a method that is associated with an object of the class and can only be invoked through the object.
+
+
+
+
+//Use of this and Super Keyword
+
+
+=>this keyword:
+This keyword refers to the current object inside the method or constructor
+for ex- it points to same object as of variable reference given => a=10; so like a is pointing to 10 memory address, the this keyword would also point to memory address of 10;
+
+whenever the name of instance and local variable both are same 
+then our runtime environment JVM will get confused that which one is local variable and which one is instance variable
+=>to avoid this problem we should use this keyword
+
+It is also used when we want to call default constructor of its all class.
+
+it also calls parameterised constructor of it's own class.
+
+
+
+=>Super keyword:
+
+a super keyword refers to the object of super class, it is used when we want call the Super class variable, method and constructor through sub class object
+
+1. Note:- whenever the Super class and sub class variable and method name are same then it can be used only;
+2. To Avoid the confusion between super class and sub class variable and methods that have same name, we should use Super keyword
+
+
+Finalized Method()
