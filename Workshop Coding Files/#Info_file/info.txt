@@ -102,4 +102,199 @@ a super keyword refers to the object of super class, it is used when we want cal
 2. To Avoid the confusion between super class and sub class variable and methods that have same name, we should use Super keyword
 
 
-Finalized Method()
+=>>Finalized Method()
+The Finalised() method in java is called by the garbage collector just before an object is destroyed.
+it allow the object to perform a cleanup activity.
+Cleanup Activity means closing the resources associated with the object, like database connection, network connection or we can say resource de-allocation
+
+. It is defined in the Object class and available to all Java Classes.
+. It is not a reserved keyword
+. Called only once per object by the Garbage Collector
+
+
+
+=>>Inheritance 
+
+:- When we construct a new class from existing class in such way that the new class acccess all the features and properties of the existing class is called Inheritance.
+
+In java => extends keyword is used to perform inheritance
+it provides code re-usability.
+
+We cannot access private member of class using inheritance.
+
+A Sub Class Contain all the features of Super Class, so we should always create object of sub-class
+because it have all features of Super Class As Well as it features defined in it's own.
+
+Method overloading is only possible through inheritance.
+
+
+Syntax:
+
+class a
+{
+
+}
+
+class b extends a
+{
+
+}
+
+
+//Types of Inheritance
+1: Single Inheritance => Only 1 Super Class And 1 Sub Class [Sub Class Access all the properties of super class]
+
+2: Multi-Level Inheritance => In multi-level inheritance, a class is derived from another derived class, forming a chain.
+Example:
+class A { }
+class B extends A { }
+class C extends B { }
+Here, C inherits from B, and B inherits from A.
+
+3:Multiple Inheritance => 1 sub class multiple super class
+Java Does not support multiple inhertance but it supports with Interface
+
+//Q:How it is implemented using Interface
+
+interface Parent1 {
+ void greet();
+}
+interface Parent2 {
+ void greet();
+}
+class Child implements Parent1, Parent2 {
+ public void greet() {
+ System.out.println("Hello from Child!");
+ }
+}
+
+
+Q:Why Java Does not support multiple inheritance?
+=> Java does not support multiple inheritance with classes 
+this decision was made to avoid complexity and ambiguity because it sub class extends two super classes then it if both super classes will have same name methods then the sub class would be confused from where it needs to access the method from which super class.
+
+
+
+Q:how does python support it?
+=>>Python uses the Method Resolution Order (MRO), which follows the C3
+Linearization Algorithm. This ensures that methods are resolved in a predictable and conflict free manner, even when multiple parent classes define methods with the same name.
+
+4: Hierachical Inheritance=>>
+// In Hierarchical Inheritance, one super class is extended by multiple sub classes.
+
+--or--
+
+In hierarchical inheritance, multiple classes inherit from a single parent clas
+
+//Example 1
+class A { }
+class B extends A { }
+class C extends A { }
+
+//Example 2
+class Animal {
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Cat meows");
+    }
+}
+
+// Both Dog and Cat inherit from Animal, so they have access
+
+
+
+//Access Modifiers=> Provides accessibility of the object in java => Public, Protected, Private
+=>Note: If Class or method is not defined with access modifier then by default it's public.
+
+any  private cannot be accessed even with inhertance, means even if you extends from parents class
+you would not be able to access the private method
+
+but protected method can be accessed.
+
+
+=>>Constructor in Inheritance
+=> When We Create an object of the child class, Java first call the parent class constructor, then the child class constructor.
+
+
+A package in Java is a collection of related classes, interfaces, and sub-packages. It is used to organize code, avoid naming conflicts, and provide access protection. Packages help manage large code projects by grouping similar types together. You can create a package using the package keyword at the top of your Java file.
+
+
+package mypackage;
+
+public class MyClass {
+    // your class code
+}
+
+//Polymorphism => Same Object but different behaviour.
+
+
+//compile time polymorphism => A polymorphism which exist that the time of compilation      
+we can achieve compile time Polymorphism using method overloading
+
+method overloading => when a class contain more than one method but it's name is same but functionality and parameter taken are different
+
+for ex :- + sign used for addition as well as concatenation
+
+
+//Runtime Polymorphism
+a polymorphism which exists at time of execution of program is called runtime polymorphism
+
+when we write method in super and sub classes in such a way that method name and parameter must be same is called method over-riding
+
+
+//A Lambda Expression is a short block of code which takes in parameter and returns a value , it is an anonymous function.
+Anonymous Function =>
+1: Doesn't Have Name
+2: Doesn't Have Return Types
+3: Doesn't Have Body
+
+
+//Steps To Make Any Function Into Lambda Expression>>
+1: Remove Access Modifier
+2: Remove it's return type
+3: Remove Method Name
+4: Place an arrow =>
+
+()-> {System.out.println("Hello World")}
+
+//Characterstics and properties of lambda Expression
+1: If body has one statement then we can remove curly braces
+2: Uses type inference, compiler guess the situation or context
+3: when we write a lamda expression we don't have to mention datatype of the parameter that is because the java compiler automatically guess the type where the lamda function is being used, this is known as type inference
+4: No Return Keyword 
+5: if only one parameter remove small bracket
+(str) -> str.length();
+str -> str.length();
+
+
+//Benefits of anonymous function=>
+to enable functional programming in java
+to make code more readable, mantainable and reduced code
+to enable parallel processing
+
+
+//Collection of abstract class is interface
+implement keyword is used to use interface
+
+
+//=> @functional interface
+
+//Array => It is a collection of same type of data, at contiguous memory location
+
+syntax: datatype [size of array] nameofarray
+int a[] = {1,2,3,4,5}
+length of array = a.length
+length-1 = index of last element
+//Static array is an array whose size is fixed
+//Array Could be of 2 types => 1D array and 2D array
