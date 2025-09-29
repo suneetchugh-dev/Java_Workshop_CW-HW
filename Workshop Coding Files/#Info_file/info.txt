@@ -298,3 +298,150 @@ length of array = a.length
 length-1 = index of last element
 //Static array is an array whose size is fixed
 //Array Could be of 2 types => 1D array and 2D array
+
+
+
+//Package
+
+the classes contained in the package can be used in any program by importing 
+package also provide a way for seperate design from code
+
+user defined package, builtin package aka pre-defined package aka API package
+
+Java Packages Examples:-  lang,awt[for gui], util[Scanner classes nextInt Method], IO[buffer reader classes], net[for connections], applet
+
+
+//creating a user defined package
+1: decide name of that package
+2: go to this path C:\Program Files\Java\jdk-24\bin
+3: create a folder and that would be your package name
+4: Inside that folder create your class file which your will import in your main program
+5: now you can only import that package from a java file created inside bin folder 
+
+
+//Exception Handling
+=> Exception: An Exception is an unwanted call or unexpected event that interrupt the normal flow of the program during run-time
+
+
+
+//what is Exception Handling=>>
+
+In Exception Handling, we should have an alternative source through which we can handle the Exception 
+
+
+To handle exception we have=>
+
+pre defined exception => try , catch
+Finally
+Throw and Throws
+
+
+
+//Throwable class
+1: Exception 2:Error
+
+
+1:
+ArithmeticException
+NullPointerException
+RuntimeException
+IOException
+SQLException
+
+
+2:
+Index out of bonds 
+stack overflow
+IO Error
+
+
+
+//Write a java program to search an element in array
+//use both linear and binary search
+
+
+
+//throw is a keyword in java, used to explicitly throw an exception
+
+
+//throws => it is used to declare exception that a method might throw, so the caller of the method is informed to handle them.
+
+
+
+//Assertion- an assertion is a statement used during testing or debugging to check if something is true
+if the condition is false java throws an AssertionError and stops the program
+
+
+
+//Localization in Java
+=> Localization is the process of adapting a software application to a specific local or region by translating message formatting dates, numbers and currencies according to the local convention.
+
+
+//String
+=> It is a collection or sequence of characters
+stored in heap memory area
+
+In Java String are immutable.
+String str is pointing to string constant pool.
+
+
+In java, String is basically an object that represents sequence of characters values and string object are immutable and therefore cannot be modified.
+
+Creating two types of String=>
+1: String str = "Hello"  #stored only in string constant pool
+2: String str = new String("Hello"); #creates two object on in string constant pool and one outside constant pool in heap area
+
+
+//String Bufferclass => mutable
+String Class Object are immutable and hence their context cannot be modified 
+String Bufferclass are mutable and therfore they can be modified. 
+moreover the method directly manipulate the data.
+
+
+//A String builder is same as String Buffer except for it being non syncronized
+
+
+//A Thread in Java, is smallest unit of execution, it is a lightweight sub process that run independently  
+
+Threads allows multiple tasks to run concurrently using multi-threading by rapidly switching overlapping periods gives illusions of simultaneous execution
+used for I/O concurrency
+
+Parallelism is different in this threads are literally ran on different and multiple cores of CPU, they literally cause time reduction to accomplish a computational task.
+
+
+//We can create threads in 2 ways
+1: By Extending Thread Class
+2: By Implementing Runnable Class
+
+
+//Thread that works in background like garbage collector
+
+
+//Synchronization is a technique in java that make sure only one thread at a time can access external resource
+
+.. The keyword synchronize 
+
+java io input is a collection of classes and string in the java.io package that handles reading data from source 
+
+it provided both byte and character string to support all types of data
+
+
+
+*Socket Programming*
+=>Socket : collection of IP addresses and port number.
+
+
+=>A server socket is a network programming construct that allow a server application to listen for an except incoming network connection from client on a specific IP address and port number, it act as a server for a tcp connection endpoint waiting for client to initiate a connection. and once established. it handles the communication by accepting the connection and potentially returning the data to the client.
+
+=> In Client Server architecture is a distibuted network where two types of components which is client and server communicate to provide services and resources.
+Client (like a user computer or phone) intiiate request for service such as browsing a web page or setting an email, while services (high performance computer) process this request and perform task and then send back the response.
+=>they include requesting and receiving a response, using TCP and UDP protocol
+=>socket are created for both client and server..
+
+UDP is connection less oriented protocol 
+while TCP is connection oriented protocol
+
+
+Input Stream and Output Stream
+
+
